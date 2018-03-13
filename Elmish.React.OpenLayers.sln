@@ -1,17 +1,54 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Elmish.React.OpenLayers", "src/Elmish.React.OpenLayers.fsproj", "{E5DEFC96-37CF-4844-9C9E-CFA0A9A8AED3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{744A94A1-8814-4315-B898-FE163A4017EB}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25946088-9AE5-456E-A8EE-6AD8F0EA70FB}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "App", "src\App\App.fsproj", "{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fable.Import", "src\Fable.Import\Fable.Import.fsproj", "{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E5DEFC96-37CF-4844-9C9E-CFA0A9A8AED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5DEFC96-37CF-4844-9C9E-CFA0A9A8AED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5DEFC96-37CF-4844-9C9E-CFA0A9A8AED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5DEFC96-37CF-4844-9C9E-CFA0A9A8AED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|x64.ActiveCfg = Debug|x64
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|x64.Build.0 = Debug|x64
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|x86.ActiveCfg = Debug|x86
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Debug|x86.Build.0 = Debug|x86
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|x64.ActiveCfg = Release|x64
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|x64.Build.0 = Release|x64
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|x86.ActiveCfg = Release|x86
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734}.Release|x86.Build.0 = Release|x86
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|x64.ActiveCfg = Debug|x64
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|x64.Build.0 = Debug|x64
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|x86.ActiveCfg = Debug|x86
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Debug|x86.Build.0 = Debug|x86
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x64.ActiveCfg = Release|x64
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x64.Build.0 = Release|x64
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x86.ActiveCfg = Release|x86
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734} = {25946088-9AE5-456E-A8EE-6AD8F0EA70FB}
+		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09} = {25946088-9AE5-456E-A8EE-6AD8F0EA70FB}
 	EndGlobalSection
 EndGlobal

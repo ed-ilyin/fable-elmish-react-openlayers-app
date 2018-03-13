@@ -22,7 +22,7 @@ console.log("Bundling for " + (isProduction ? "production" : "development") + ".
 
 module.exports = {
     devtool: isProduction ? undefined : "source-map",
-    entry: resolve('./src/Elmish.React.OpenLayers.fsproj'),
+    entry: resolve('./src/App/App.fsproj'),
     output: {
         filename: 'bundle.js',
         path: resolve('./public'),
@@ -65,6 +65,10 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },

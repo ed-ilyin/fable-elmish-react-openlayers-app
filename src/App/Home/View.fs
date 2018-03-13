@@ -22,5 +22,5 @@ let root model dispatch =
       span
         [ ]
         [ str (sprintf "Hello %s" model) ]
-      div [ Id "map" ] []
+      div [ Id "mapa" ] []
     ]
