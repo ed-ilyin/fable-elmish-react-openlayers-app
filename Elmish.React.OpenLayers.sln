@@ -12,6 +12,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "App", "src\App\App.fsproj",
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fable.Import", "src\Fable.Import\Fable.Import.fsproj", "{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fable.Helpers.ReactOpenLayers", "src\Fable.Helpers.ReactOpenLayers\Fable.Helpers.ReactOpenLayers.fsproj", "{61E1E8BD-733D-4B1C-9758-861BB311A303}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,9 +48,22 @@ Global
 		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x64.Build.0 = Release|x64
 		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x86.ActiveCfg = Release|x86
 		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09}.Release|x86.Build.0 = Release|x86
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|x64.ActiveCfg = Debug|x64
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|x64.Build.0 = Debug|x64
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|x86.ActiveCfg = Debug|x86
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Debug|x86.Build.0 = Debug|x86
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|x64.ActiveCfg = Release|x64
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|x64.Build.0 = Release|x64
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|x86.ActiveCfg = Release|x86
+		{61E1E8BD-733D-4B1C-9758-861BB311A303}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3840E236-0BB2-4CB2-8AE6-EAC03F1A4734} = {25946088-9AE5-456E-A8EE-6AD8F0EA70FB}
 		{17E114B2-DAD2-41F4-86F3-3D58ECAA6C09} = {25946088-9AE5-456E-A8EE-6AD8F0EA70FB}
+		{61E1E8BD-733D-4B1C-9758-861BB311A303} = {25946088-9AE5-456E-A8EE-6AD8F0EA70FB}
 	EndGlobalSection
 EndGlobal

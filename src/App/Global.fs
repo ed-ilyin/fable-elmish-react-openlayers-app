@@ -23,10 +23,9 @@ let viewOptions = createEmpty<Ol.ViewOptions>
 do viewOptions.center <- Some (0., 0.)
 do viewOptions.zoom <- Some 2.
 let mapOptions = createEmpty<Ol.MapOptions>
-do mapOptions.target <- U2.Case2 "map" |> Some
 do mapOptions.layers <- ResizeArray<_> [ layer ] |> U2.Case1 |> Some
 do mapOptions.view <- Ol.view.Create viewOptions |> Some
-let olmap = Ol.map.Create mapOptions
+// let olmap = Ol.map.Create mapOptions
 
 // // Exampe:
 // import 'ol/ol.css';
