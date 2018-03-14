@@ -11,17 +11,22 @@ let placeButton dispatch (name, lon, lat, zoom) =
             |> dispatch
     ] [ str name ]
 
+let orientationButton dispatch (name, orientation) =
+    button [
+        OnClick (fun _ -> ChangeOrientation orientation |> dispatch)
+    ] [ str name ]
+
 let root model dispatch =
     div [] [
         span [] [ str (sprintf "Hello %s" model.name) ]
-        div [] [
-            button [] [ str "landscape" ]
-            button [] [ str "portrait" ]
-        ]
+        [   "landscape", Landscape
+            "portrait", Portrait
+        ]   |> List.map (orientationButton dispatch)
+            |> div []
         olMap [
             Center model.coordinate
             Zoom model.zoom
-            Class "landscape"
+            Orientation model.orientation
         ] []
         [   "Rīga", 24.106389, 56.948889, 15.
             "London", -0.1275, 51.507222, 13.

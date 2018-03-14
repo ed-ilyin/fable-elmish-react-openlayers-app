@@ -4,11 +4,12 @@ open Fable.Core
 open Fable.Core.JsInterop
 open Fable.Helpers.React
 
-type Orientation = Horizontal | Vertical
+type Orientation = Landscape | Portrait
 
 type Attribute =
     | Center of OpenLayers.Ol.Coordinate
     | Zoom of float
+    | Orientation of Orientation
     | Ref of (Browser.Element -> unit)
     interface Props.IHTMLProp
 
@@ -16,6 +17,7 @@ type Attribute =
 type Props = {
     center: OpenLayers.Ol.Coordinate option
     zoom: float option
+    orientation: Orientation option
 }
 
 type OlMap(props) =
@@ -36,10 +38,19 @@ type OlMap(props) =
     do mapOptions.view <- Ol.view.Create viewOptions |> Some
     let mutable mapDiv : Browser.Element = unbox null
     let mutable olMap : OpenLayers.Ol.Map = unbox null
+    let setOrientation orientation =
+        let width, height = olMap.getSize ()
+        let isLandscape = width > height
+        match isLandscape, orientation with
+            | false, Landscape | true, Portrait -> height, width
+            | false, Portrait | true, Landscape -> width, height
+            |> olMap.setSize
+
     let update props =
         let view = olMap.getView()
         do Option.iter view.setCenter props.center
         do Option.iter view.setZoom props.zoom
+        do Option.iter setOrientation props.orientation
     override this.render () = div [ Ref (fun e -> mapDiv <- e) ] []
     override this.componentDidMount () =
         do mapOptions.target <- U2.Case1 mapDiv |> Some
