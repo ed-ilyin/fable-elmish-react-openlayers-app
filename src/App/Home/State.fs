@@ -5,7 +5,7 @@ open Types
 
 let init () : Model * Cmd<Msg> =
     {   name = "Amsterdam"
-        coordinate = (37.41, 8.82) |> Ol.proj.fromLonLat
+        coordinate = (4.9, 52.366667) |> Ol.proj.fromLonLat
     }, Cmd.none
 
 let update msg model : Model * Cmd<Msg> =

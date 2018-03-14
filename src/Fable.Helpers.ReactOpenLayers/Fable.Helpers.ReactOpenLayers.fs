@@ -28,7 +28,7 @@ type OlMap(props) =
     let layer = Ol.Layer.tile.Create layerTileOptions :> Ol.Layer.Base
     let viewOptions = createEmpty<Ol.ViewOptions>
     do viewOptions.center <- Some (2000000., 7000000.)
-    do viewOptions.zoom <- Some 4.
+    do viewOptions.zoom <- Some 15.
     let mapOptions = createEmpty<Ol.MapOptions>
     do mapOptions.layers <-
         ResizeArray<_> [ layer ] |> U2.Case1 |> Some
