@@ -22,5 +22,4 @@ let root model dispatch =
         br []
         span [] [ str (sprintf "Hello %s" model) ]
         olMap [ Options Global.mapOptions ] []
-        olMap [ Options Global.mapOptions ] []
     ]

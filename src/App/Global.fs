@@ -25,26 +25,3 @@ do viewOptions.zoom <- Some 2.
 let mapOptions = createEmpty<Ol.MapOptions>
 do mapOptions.layers <- ResizeArray<_> [ layer ] |> U2.Case1 |> Some
 do mapOptions.view <- Ol.view.Create viewOptions |> Some
-// let olmap = Ol.map.Create mapOptions
-
-// // Exampe:
-// import 'ol/ol.css';
-// import Map from 'ol/map';
-// import View from 'ol/view';
-// import TileLayer from 'ol/layer/tile';
-// import XYZ from 'ol/source/xyz';
-
-// new Map({
-//   target: 'map',
-//   layers: [
-//     new TileLayer({
-//       source: new XYZ({
-//         url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-//       })
-//     })
-//   ],
-//   view: new View({
-//     center: [0, 0],
-//     zoom: 2
-//   })
-// });

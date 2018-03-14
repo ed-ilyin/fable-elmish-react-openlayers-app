@@ -1,5 +1,6 @@
 module Fable.Helpers.ReactOpenLayers
 open Fable.Import
+open Fable.Import.Browser
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.Helpers.React
@@ -21,7 +22,7 @@ type OlMap(props) =
         let p =
             JS.Object.assign (
                 JsInterop.createEmpty,
-                this.props,
+                this.props?div,
                 JsInterop.createObj [ "ref" ==> fun e -> mapDiv <- e ]
             )
         createElement ("div", p, this.children)
