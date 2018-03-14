@@ -8,13 +8,14 @@ type Orientation = Horizontal | Vertical
 
 type Attribute =
     | Center of OpenLayers.Ol.Coordinate
-    | Orientation of Orientation
+    | Zoom of float
     | Ref of (Browser.Element -> unit)
     interface Props.IHTMLProp
 
 [<Pojo>]
 type Props = {
     center: OpenLayers.Ol.Coordinate option
+    zoom: float option
 }
 
 type OlMap(props) =
@@ -36,7 +37,9 @@ type OlMap(props) =
     let mutable mapDiv : Browser.Element = unbox null
     let mutable olMap : OpenLayers.Ol.Map = unbox null
     let update props =
-        do props.center |> Option.iter (olMap.getView().setCenter)
+        let view = olMap.getView()
+        do props.center |> Option.iter (view.setCenter)
+        do props.zoom |> Option.iter (view.setZoom)
     override this.render () =
         div [ Ref (fun e -> mapDiv <- e) ] []
     override this.componentDidMount () =
