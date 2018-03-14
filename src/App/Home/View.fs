@@ -14,8 +14,16 @@ let placeButton dispatch (name, lon, lat, zoom) =
 let root model dispatch =
     div [] [
         span [] [ str (sprintf "Hello %s" model.name) ]
-        olMap [ Center model.coordinate; Zoom model.zoom ] []
-        [   "Riga", 24.106389, 56.948889, 15.
+        div [] [
+            button [] [ str "landscape" ]
+            button [] [ str "portrait" ]
+        ]
+        olMap [
+            Center model.coordinate
+            Zoom model.zoom
+            Class "landscape"
+        ] []
+        [   "Rīga", 24.106389, 56.948889, 15.
             "London", -0.1275, 51.507222, 13.
         ]   |> List.map (placeButton dispatch)
             |> div []

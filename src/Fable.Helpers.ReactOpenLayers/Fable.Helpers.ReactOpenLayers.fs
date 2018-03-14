@@ -38,18 +38,17 @@ type OlMap(props) =
     let mutable olMap : OpenLayers.Ol.Map = unbox null
     let update props =
         let view = olMap.getView()
-        do props.center |> Option.iter (view.setCenter)
-        do props.zoom |> Option.iter (view.setZoom)
-    override this.render () =
-        div [ Ref (fun e -> mapDiv <- e) ] []
+        do Option.iter view.setCenter props.center
+        do Option.iter view.setZoom props.zoom
+    override this.render () = div [ Ref (fun e -> mapDiv <- e) ] []
     override this.componentDidMount () =
         do mapOptions.target <- U2.Case1 mapDiv |> Some
         do olMap <- Ol.map.Create mapOptions
         do update this.props
+    override this.componentDidUpdate (_, _) = do update this.props
+    override this.componentWillUnmount () =
+        do unbox () |> olMap.setTarget
 
-    override this.componentDidUpdate (_, _) =
-        do update this.props
-
-let inline olMap b c =
+let inline olMap (b: Props.IHTMLProp list) c =
     let props = JsInterop.keyValueList CaseRules.LowerFirst b |> unbox
     ofType<OlMap,_,_> props c
