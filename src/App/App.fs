@@ -12,6 +12,7 @@ open App.State
 open Global
 
 importAll "../../sass/main.sass"
+importAll "ol/ol.css"
 
 open Fable.Helpers.React
 open Fable.Helpers.React.Props

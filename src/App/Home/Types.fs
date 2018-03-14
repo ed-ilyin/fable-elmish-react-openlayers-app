@@ -1,6 +1,10 @@
 module Home.Types
+open Fable.Import
 
-type Model = string
+type Model = {
+    name: string
+    coordinate: OpenLayers.Ol.Coordinate
+}
 
 type Msg =
-  | ChangeStr of string
+  | ChangePlace of (string * OpenLayers.Ol.Coordinate)
