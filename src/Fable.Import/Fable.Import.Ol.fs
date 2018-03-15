@@ -10,7 +10,6 @@ let map: OpenLayers.Ol.MapStatic = jsNative
 [<Import("default","ol/proj")>]
 let proj: OpenLayers.Ol.Proj.IExports = jsNative
 
-
 [<Import("default","ol/view")>]
 let view: OpenLayers.Ol.ViewStatic = jsNative
 
